@@ -1,0 +1,16 @@
+
+  .center {
+    margin: auto;
+  }
+
+  .myblue {
+    color: #47a3ff;
+  }
+
+  .hidden {
+    display: none;    
+  }
+
+  .pointer {
+    cursor: pointer;
+  }

@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <title>CMC with Exchange</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  crossorigin="anonymous" />
+<link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+
+
+
+
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="default.asp">
+      <img src="logo.png" alt "circle-logo" style="width:42px"> CoinMarketCap-Clone
+    </a>
+  </nav><br>
+
+  <div class="container">
+
+    <div class="text-center">
+      <h3><b>Top 100 Cryptocurrencies by Market Capitalization</b> </h3>
+      <h6 style="color:grey;"> Bootcamp project: Create a clone of CoinMarketCap </h6><br><br>
+    </div>
+
+    <div>
+      <nav class="navbar navbar-expand-lg">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active pointer" id="coinsTap" onclick="showCoins()">Cryptocurrencies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pointer" id="exTap" onclick="showEx()">Exchanges</a>
+          </li>
+        </ul>
+    </div>
+
+    <input type="checkbox" style="display: none;" id="mycheckBox">
+    <input type="checkbox" style="display: none;" id="myprice">
+    <input type="checkbox" style="display: none;" id="mychange">
+
+    <input type="checkbox" style="display: none;" id="exchange">
+    <input type="checkbox" style="display: none;" id="trust">
+    <input type="checkbox" style="display: none;" id="volume">
+
+    <!-- Table de coins -->
+    <div id="coinTable">
+      <table id="mitabla" class="table w-100">
+
+      </table>
+
+    </div>
+     
+    <!-- Tabla de Exchanges -->
+    <div id="exchangesTable" class="hidden">
+      <table id="myXtable" class="table w-100">
+
+      </table>
+    </div>
+
+    <script src="marketcapapi.js">
+    </script>
+    <script src="myjsfortoggle.js">
+    </script>
+
+</body>
+
+</html>
