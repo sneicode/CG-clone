@@ -33,21 +33,21 @@ async function getOrder() {
 //Cambia el orden en base al Precio, dependiendo del checkbox
 async function getPrice() {
 
-  var checkBox = document.getElementById("myprice").checked;
+  var checkBox = document.getElementById("myprice");
   //Fetching API
   var response = await fetch(url)
   var data = await response.json()
 
   //Si el checkbox es false, se ordena por negativos primero
-  if (checkBox == false) {
-    document.getElementById("myprice").checked = true;
+  if (checkBox.checked == false) {
+    checkBox.checked = true;
     data.sort(function (a, b) {
       return b.current_price - a.current_price;
     });
 
   } else {
     //Si el checkbox es true, se ordena por positivos primero
-    document.getElementById("myprice").checked = false;
+    checkBox.checked = false;
     data.sort(function (a, b) {
       return a.current_price - b.current_price;
     });
@@ -59,21 +59,21 @@ async function getPrice() {
 //Cambia la data de la API dependiente de 24h %
 async function getChange() {
 
-  var checkBox = document.getElementById("mychange").checked;
+  var checkBox = document.getElementById("mychange");
 
   var response = await fetch(url)
   var data = await response.json()
 
   //Si el checkbox es false, se ordena por negativos primero
-  if (checkBox == false) {
-    document.getElementById("mychange").checked = true;
+  if (checkBox.checked == false) {
+    checkBox.checked = true;
     data.sort(function (a, b) {
       return b.price_change_percentage_24h_in_currency - a.price_change_percentage_24h_in_currency;
     });
 
   } else {
     //Si el checkbox es true, se ordena por positivos primero
-    document.getElementById("mychange").checked = false;
+    checkBox.checked = false;
     data.sort(function (a, b) {
       return a.price_change_percentage_24h_in_currency - b.price_change_percentage_24h_in_currency;
     });
